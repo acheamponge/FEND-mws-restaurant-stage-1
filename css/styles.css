@@ -35,6 +35,282 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+/*======================= Catch-all for images ===================================== */
+img{
+  width: 100%;
+}
+/* ====================== Responsive Pattern - Flexbox Layout ====================== */
+.container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box{
+  width: 100%;
+}
+/* ====================== Responsive Pattern - Grid Layout ====================== */
+.row{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-xl-auto {
+  width: 100%;
+}
+.col-1{
+  flex: 0 0 8.33%;
+  max-width: 8.33%;
+}
+.col-2{
+  flex: 0 0 16.66%;
+  max-width: 16.66%;
+}
+.col-3{
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-4{
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+.col-5{
+  flex: 0 0 41.66%;
+  max-width: 41.66%;
+}
+.col-6{
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.col-7{
+  flex: 0 0 58.33%;
+  max-width: 58.33%;
+}
+.col-8{
+  flex: 0 0 66.66%;
+  max-width: 66.66%;
+}
+.col-9{
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.col-10{
+  flex: 0 0 83.33%;
+  max-width: 83.33%;
+}
+.col-11{
+  flex: 0 0 91.66%;
+  max-width: 91.66%;
+}
+.col-12{
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+@media (min-width: 401px) {
+  .col-sm-1{
+    flex: 0 0 8.33;
+    max-width: 8.33%;
+  }
+  .col-sm-2{
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+  }
+  .col-sm-3{
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-sm-4{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+  .col-sm-5{
+    flex: 0 0 41.66%;
+    max-width: 41.66%;
+  }
+  .col-sm-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-sm-7{
+    flex: 0 0 58.33%;
+    max-width: 58.33%;
+  }
+  .col-sm-8{
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+  }
+  .col-sm-9{
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-sm-10{
+    flex: 0 0 83.33%;
+    max-width: 83.33%;
+  }
+  .col-sm-11{
+    flex: 0 0 91.66%;
+    max-width: 91.66%;
+  }
+  .col-sm-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 601px) {
+  .col-md-1{
+    flex: 0 0 8.33;
+    max-width: 8.33%;
+  }
+  .col-md-2{
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+  }
+  .col-md-3{
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-md-4{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+  .col-md-5{
+    flex: 0 0 41.66%;
+    max-width: 41.66%;
+  }
+  .col-md-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-md-7{
+    flex: 0 0 58.33%;
+    max-width: 58.33%;
+  }
+  .col-md-8{
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+  }
+  .col-md-9{
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-md-10{
+    flex: 0 0 83.33%;
+    max-width: 83.33%;
+  }
+  .col-md-11{
+    flex: 0 0 91.66%;
+    max-width: 91.66%;
+  }
+  .col-md-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 876px) {
+  .col-lg-1{
+    flex: 0 0 8.33;
+    max-width: 8.33%;
+  }
+  .col-lg-2{
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+  }
+  .col-lg-3{
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-lg-4{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+  .col-lg-5{
+    flex: 0 0 41.66%;
+    max-width: 41.66%;
+  }
+  .col-lg-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-lg-7{
+    flex: 0 0 58.33%;
+    max-width: 58.33%;
+  }
+  .col-lg-8{
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+  }
+  .col-lg-9{
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-lg-10{
+    flex: 0 0 83.33%;
+    max-width: 83.33%;
+  }
+  .col-lg-11{
+    flex: 0 0 91.66%;
+    max-width: 91.66%;
+  }
+  .col-lg-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1081px) {
+  .col-xl-1{
+    flex: 0 0 8.33;
+    max-width: 8.33%;
+  }
+  .col-xl-2{
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+  }
+  .col-xl-3{
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-xl-4{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+  .col-xl-5{
+    flex: 0 0 41.66%;
+    max-width: 41.66%;
+  }
+  .col-xl-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-xl-7{
+    flex: 0 0 58.33%;
+    max-width: 58.33%;
+  }
+  .col-xl-8{
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+  }
+  .col-xl-9{
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-xl-10{
+    flex: 0 0 83.33%;
+    max-width: 83.33%;
+  }
+  .col-xl-11{
+    flex: 0 0 91.66%;
+    max-width: 91.66%;
+  }
+  .col-xl-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
@@ -66,7 +342,7 @@ nav h1 a {
   letter-spacing: 10px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
   nav h1 a {
     font-size: 12pt;
     letter-spacing: 6px;
@@ -112,8 +388,6 @@ nav h1 a {
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
-  width: 100%;
-  height: 80px;
   background-color: #3397DB;
   align-items: center;
 }
@@ -122,8 +396,8 @@ nav h1 a {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0 20px;
-  padding-top: 10px;
+  margin: 0;
+  padding: 10px;
 }
 .filter-options select {
   background-color: white;
@@ -134,22 +408,11 @@ nav h1 a {
   letter-spacing: 0;
   margin: 10px;
   padding: 0 10px;
-  width: 200px;
+  width: 90%;
 }
 @media screen and (max-width: 400px){
-  .filter-options {
-    height: 130px;
-  }
-  .filter-options select {
-    width: 80%;
-  }
   .filter-options select:nth-last-of-type(1) {
     margin-top: 0 ;
-  }
-}
-@media screen and (max-width: 675px) and (min-width: 400px) {
-  .filter-options select {
-    width: 40%;
   }
 }
 /* ====================== Restaurant Listing ====================== */
@@ -176,9 +439,7 @@ nav h1 a {
   background-color: #ccc;
   display: block;
   margin: 0;
-  max-width: 100%;
   min-height: 200px;
-  min-width: 100%;
 }
 #restaurants-list li h1 {
   color: #f18200;
@@ -251,12 +512,10 @@ nav h1 a {
   position: fixed;
   right: 0;
   top: 80px;
-  width: 50%;
 }
 .inside #map {
   background-color: #ccc;
   height: 100%;
-  width: 100%;
 }
 .inside #footer {
   bottom: 0;
@@ -274,7 +533,6 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-	width: 100%;
   border-radius: 1px 40px / 40px;
 }
 #restaurant-address {
@@ -291,13 +549,11 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	/*width: 90%;*/
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
-  width: calc(50% - 80px);
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -315,14 +571,13 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  /*width: 85%;*/
   border-radius: 1px 40px / 40px;
 }
 #reviews-list li p {
@@ -331,19 +586,19 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
-@media screen and (max-width: 875px){
-  #maincontent {
-    display: flex;
-    flex-wrap: wrap;
+@media screen and (min-width: 875px){
+  .inside #map-container {
+    width: 50%;
   }
+  #container-2 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 875px){
   .inside #map-container {
     position: relative;
     height: 400px;
-    width: 100%;
     top: 120px;
-  }
-  #restaurant-container, #reviews-container {
-    width: 100%;
   }
   #breadcrumb {
     width: calc(100% - 80px);
