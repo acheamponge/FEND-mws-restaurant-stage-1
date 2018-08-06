@@ -421,6 +421,12 @@ nav h1 a {
     margin-top: 0 ;
   }
 }
+.filter-options select:focus,.filter-options select:hover {
+  outline: 0;
+  color: white;
+  background-color: #454545;
+  box-shadow: 0 0 8px 3px;
+}
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   background-color: #f3f3f3;
@@ -463,7 +469,6 @@ nav h1 a {
 }
 #restaurants-list li a {
   background-color: #FFA805;
-  border-bottom: 3px solid #eee;
   color: #2B2B2B;
   display: inline-block;
   font-size: 10pt;
@@ -473,6 +478,12 @@ nav h1 a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+#restaurants-list li a:focus,#restaurants-list li a:hover {
+  outline: 0;
+  box-shadow: 0 0 8px 3px;
+  background-color:  #2B2B2B;
+  color: #FFA805;
 }
 @media screen and (max-width: 400px){
   #restaurants-list li {
