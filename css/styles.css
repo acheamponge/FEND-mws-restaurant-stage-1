@@ -23,7 +23,7 @@ a {
 }
 a:hover, a:focus {
 	color: #3397db;
-	text-decoration: none;
+	text-decoration: underline;
 }
 a img{
 	border: none 0px #fff;
@@ -337,48 +337,54 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 14pt;
+  font-size: 16pt;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
 @media screen and (max-width: 450px){
   nav h1 a {
-    font-size: 12pt;
+    font-size: 13pt;
     letter-spacing: 6px;
   }
 }
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 10px 20px 16px;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: calc(50% - 40px);
 }
 
 /* Display list items side by side */
 #breadcrumb li {
-    display: inline;
+  font-size: 18px;
+  display: inline;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
+  color: #0275d8;
+  text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
+}
+@media screen and (max-width: 875px){
+  #breadcrumb {
+    width: calc(100% - 40px);
+  }
 }
 /* ====================== Map ====================== */
 #map {
@@ -598,10 +604,7 @@ nav h1 a {
   .inside #map-container {
     position: relative;
     height: 400px;
-    top: 120px;
-  }
-  #breadcrumb {
-    width: calc(100% - 80px);
+    top: 130px;
   }
   .inside #footer {
     width: calc(100% - 50px);
