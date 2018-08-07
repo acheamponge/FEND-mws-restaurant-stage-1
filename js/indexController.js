@@ -17,7 +17,7 @@ IndexController.prototype._registerServiceWorker = function () {
   var indexController = this;
 
   // register new service worker (if not present in the given scope)
-  navigator.serviceWorker.register('/sw.js').then(function (reg) {
+  navigator.serviceWorker.register('./sw.js').then(function (reg) {
     console.log('ServiceWorker Registered');
 
   /**
