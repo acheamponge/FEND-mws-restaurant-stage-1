@@ -41,6 +41,9 @@ IndexController.prototype._registerServiceWorker = function () {
     reg.addEventListener('updatefound', function () {
       indexController._trackInstalling(reg.installing);
     });
+  // catch any error during service worker registration
+  }).catch((err) =>{
+    console.log('ServiceWorker registration failed: ', err);
   });
 
   /**
