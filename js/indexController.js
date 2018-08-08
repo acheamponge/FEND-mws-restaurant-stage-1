@@ -1,17 +1,26 @@
-var userConsent = false;
+let userConsent = false;
+
+/**
+ * delay your service worker's initial registration until after the first page has loaded
+ */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    new IndexController();
+  });
+}
 
 function IndexController() {
   this._registerServiceWorker();
 }
 
-IndexController.prototype._registerServiceWorker = function () {
+IndexController.prototype._registerServiceWorker = function() {
   // Check if browser supports service worker
   if (!navigator.serviceWorker) return;
 
-  var indexController = this;
+  let indexController = this;
 
   // register new service worker (if not present in the given scope)
-  navigator.serviceWorker.register('./sw.js').then(function (reg) {
+  navigator.serviceWorker.register('./sw.js').then((reg) => {
     console.log('ServiceWorker registration successful with scope: ', reg.scope);
 
   /**
@@ -38,8 +47,10 @@ IndexController.prototype._registerServiceWorker = function () {
    * listen for the service worker's updatefound event, if it fires
    * then track its state
    */
-    reg.addEventListener('updatefound', function () {
-      indexController._trackInstalling(reg.installing);
+    reg.addEventListener('updatefound', () => {
+      // A wild service worker has appeared in reg.installing!
+      const newWorker = reg.installing;
+      indexController._trackInstalling(newWorker);
     });
   // catch any error during service worker registration
   }).catch((err) =>{
@@ -47,10 +58,11 @@ IndexController.prototype._registerServiceWorker = function () {
   });
 
   /**
-   * listen for the controlling service worker changing
-   * and reload the page
+   * This fires when the service worker controlling this page
+   * changes, eg a new worker has skipped waiting and become
+   * the new active worker.
    */
-  navigator.serviceWorker.addEventListener('controllerchange', function () {
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
     window.location.reload();
   });
 };
@@ -59,9 +71,10 @@ IndexController.prototype._registerServiceWorker = function () {
  * listen for the installing service worker state
  * and if installed we inform the user about update
  */
-IndexController.prototype._trackInstalling = function (worker) {
-  var indexController = this;
-  worker.addEventListener('statechange', function () {
+IndexController.prototype._trackInstalling = function(worker) {
+  let indexController = this;
+  worker.addEventListener('statechange', () => {
+    // newWorker.state has changed
     if (worker.state == 'installed') {
       indexController._updateReady(worker);
     }
@@ -77,5 +90,3 @@ IndexController.prototype._updateReady = function (worker) {
   worker.postMessage('updateSW');
 
 };
-
-new IndexController();
