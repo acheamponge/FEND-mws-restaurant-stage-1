@@ -23,7 +23,7 @@ self.addEventListener('activate', (event) => {
     return Promise.all(cacheNames.filter((cacheName) => {
       return cacheName.startsWith('mws-') && cacheName != staticCacheName;
     }).map((cacheName) => {
-      return caches['delete'](cacheName);
+      return caches.delete(cacheName);
     }));
   }));
 });
