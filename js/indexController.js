@@ -1,10 +1,4 @@
 var userConsent = false;
-/**
- * resigter service worker as soon as the page is loaded.
- */
-window.addEventListener('load', (event) => {
-  new IndexController();
-});
 
 function IndexController() {
   this._registerServiceWorker();
@@ -80,3 +74,5 @@ IndexController.prototype._updateReady = function (worker) {
   worker.postMessage('updateSW');
 
 };
+
+new IndexController();
