@@ -12,7 +12,7 @@ IndexController.prototype._registerServiceWorker = function () {
 
   // register new service worker (if not present in the given scope)
   navigator.serviceWorker.register('./sw.js').then(function (reg) {
-    console.log('ServiceWorker Registered');
+    console.log('ServiceWorker registration successful with scope: ', reg.scope);
 
   /**
    * If there is no controller means this page didn't load using
